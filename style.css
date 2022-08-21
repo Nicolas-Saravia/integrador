@@ -38,6 +38,14 @@ body{
 
 /*nav*/
 
+.bar-btn{
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
+
 .section-container{
     background-color: var(--black);
 }
@@ -79,7 +87,7 @@ body{
 }
 
 .navbar-list{
-    gap: 30px;
+    gap: 20px;
 }
 
 .navbar-list a{
@@ -90,10 +98,13 @@ body{
 }
 
 
+
 .navbar-list a:hover{
     color: var(--blue);
     transition: 1s;
 }
+
+
 
 /*main*/
 
@@ -275,6 +286,51 @@ button:hover{
     }
 }
 
+@media (max-width:990px){
+    .navbar i{
+        display: block;
+    }
+
+
+
+    .navbar-list{
+        position: absolute;
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        display: none;
+        z-index: 9999;
+        height: 100vh;
+        
+
+    }
+
+   
+
+  
+
+
+    .bar-btn{
+        font-size: 30px;
+        color: white;
+    }
+
+    #toggle-menu:checked + .navbar-list{
+        display: flex;
+    }
+
+    #toggle-menu{
+        display: none;
+    }
+}
+
+    
+
+
+    
 
 
 
